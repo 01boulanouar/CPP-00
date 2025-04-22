@@ -1,6 +1,6 @@
 NAME = megaphone
 
-CC = g++# to replace with c++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -pedantic -std=c++98
 
 RM = rm -f

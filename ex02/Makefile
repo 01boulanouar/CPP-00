@@ -1,15 +1,15 @@
-NAME = phonebook
+NAME = dream_job
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -pedantic -std=c++98
 
 RM = rm -f
 
-SRC = PhoneBook.cpp Contact.cpp
+SRC = Account.cpp tests.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-%.o : %.cpp PhoneBook.hpp Contact.hpp
+%.o : %.cpp Account.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all : $(NAME)
