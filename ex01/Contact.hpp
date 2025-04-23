@@ -6,7 +6,7 @@
 /*   By: moboulan <moboulan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 22:13:25 by moboulan          #+#    #+#             */
-/*   Updated: 2025/04/23 15:48:31 by moboulan         ###   ########.fr       */
+/*   Updated: 2025/04/23 16:26:51 by moboulan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class Contact
 		const std::string &getNickName() const;
 		const std::string &getPhoneNumber() const;
 		const std::string &getDarkestSecret() const;
+
+		void printContact() const;
 	
 	private:
 		std::string _lastName;

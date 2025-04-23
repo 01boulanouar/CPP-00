@@ -6,7 +6,7 @@
 /*   By: moboulan <moboulan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:44:32 by moboulan          #+#    #+#             */
-/*   Updated: 2025/04/23 15:43:16 by moboulan         ###   ########.fr       */
+/*   Updated: 2025/04/23 16:14:56 by moboulan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,11 @@ int main(void)
 		if (!command.compare("ADD"))
 			phonebook.addContact(getContact());
 		else if (!command.compare("SEARCH"))
-			std::cout << "SEARCH mentioned" << std::endl;
+			phonebook.search();
 		else if (!command.compare("EXIT"))
 			break ;	
-		// else
-		// 	std::cout << "invalid command !" << std::endl;
+		else
+			std::cout << "invalid command !" << std::endl;
 	}	
 	return (0);
 }

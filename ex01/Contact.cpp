@@ -6,7 +6,7 @@
 /*   By: moboulan <moboulan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 22:13:23 by moboulan          #+#    #+#             */
-/*   Updated: 2025/04/23 15:48:19 by moboulan         ###   ########.fr       */
+/*   Updated: 2025/04/23 16:28:29 by moboulan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,11 @@ const std::string &Contact::getDarkestSecret() const
 	return (_darkestSecret);
 }
 
-
+void Contact::printContact() const
+{
+	std::cout << "first name: " << _firstName << std::endl;
+	std::cout << "last name: " << _lastName << std::endl;
+	std::cout << "nick name: " << _nickName << std::endl;
+	std::cout << "phone number: " << _phoneNumber << std::endl;
+	std::cout << "darkest secret: " << _darkestSecret << std::endl;
+}
