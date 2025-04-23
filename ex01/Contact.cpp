@@ -6,7 +6,7 @@
 /*   By: moboulan <moboulan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 22:13:23 by moboulan          #+#    #+#             */
-/*   Updated: 2025/04/19 18:30:03 by moboulan         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:48:19 by moboulan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,52 +14,50 @@
 
 Contact::Contact()
 {
-	LastName = "default";
-	FirstName = "";
-	NickName = "";
-	PhoneNumber = "";
-	DarkestSecret = "";
-	// std::cout << "Contact created by default constructor!" << std::endl;
+	_lastName = "";
+	_firstName = "";
+	_nickName = "";
+	_phoneNumber = "";
+	_darkestSecret = "";
 }
 
-Contact::Contact(const std::string &LastName, const std::string &FirstName, const std::string &NickName, const std::string &PhoneNumber, const std::string &DarkestSecret)
+Contact::Contact(const std::string &lastName, const std::string &firstName, const std::string &nickName, const std::string &phoneNumber, const std::string &darkestSecret)
 {
-	this->LastName = LastName;
-	this->FirstName = FirstName;
-	this->NickName = NickName;
-	this->PhoneNumber = PhoneNumber;
-	this->DarkestSecret = DarkestSecret;
-	std::cout << "Contact " << LastName << " created!" << std::endl;
+	_lastName = lastName;
+	_firstName = firstName;
+	_nickName = nickName;
+	_phoneNumber = phoneNumber;
+	_darkestSecret = darkestSecret;
 }
 
-// Contact::~Contact()
-// {
-// 	std::cout << "Contact " << LastName << " destroyed!" << std::endl;
-// }
+Contact::~Contact()
+{
+	return ;
+}
 
 const std::string &Contact::getLastName() const
 {
-	return (LastName);
+	return (_lastName);
 }
 
 const std::string &Contact::getFirstName() const
 {
-	return (FirstName);
+	return (_firstName);
 }
 
 const std::string &Contact::getNickName() const
 {
-	return (NickName);
+	return (_nickName);
 }
 
 const std::string &Contact::getPhoneNumber() const
 {
-	return (PhoneNumber);
+	return (_phoneNumber);
 }
 
 const std::string &Contact::getDarkestSecret() const
 {
-	return (DarkestSecret);
+	return (_darkestSecret);
 }
 
 

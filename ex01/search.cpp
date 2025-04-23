@@ -1,32 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*   search.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moboulan <moboulan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/07 22:49:11 by moboulan          #+#    #+#             */
-/*   Updated: 2025/04/23 15:41:43 by moboulan         ###   ########.fr       */
+/*   Created: 2025/04/23 15:49:17 by moboulan          #+#    #+#             */
+/*   Updated: 2025/04/23 15:49:18 by moboulan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include  "PhoneBook.hpp"
-
-PhoneBook::PhoneBook()
-{
-	return ;
-}
-
-PhoneBook::~PhoneBook()
-{
-	return ;
-}
-
-void PhoneBook::addContact(Contact contact)
-{
-	static int i = 0;
-
-	contacts[i % 8] = contact;
-	i++;
-}
 

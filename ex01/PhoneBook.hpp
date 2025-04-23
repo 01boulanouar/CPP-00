@@ -9,9 +9,9 @@ class PhoneBook
 	public:
 		PhoneBook();
 		~PhoneBook();
-		void addContact(Contact &contact);
-		Contact contacts[8];
+		void addContact(Contact contact);
 	private:
+		Contact contacts[8];
 };
 
 #endif

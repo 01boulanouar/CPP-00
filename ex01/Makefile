@@ -5,7 +5,7 @@ CFLAGS = -Wall -Wextra -Werror -pedantic -std=c++98
 
 RM = rm -f
 
-SRC = PhoneBook.cpp Contact.cpp
+SRC = PhoneBook.cpp Contact.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
