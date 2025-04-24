@@ -6,7 +6,7 @@
 /*   By: moboulan <moboulan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 22:49:11 by moboulan          #+#    #+#             */
-/*   Updated: 2025/04/23 16:31:55 by moboulan         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:02:37 by moboulan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ static void print_text(std::string text, bool newline)
 
 void PhoneBook::search()
 {
+	std::string index;
 	int i;
 	
 	std::cout << " ___________________________________________ " << std::endl;
@@ -53,7 +54,7 @@ void PhoneBook::search()
 	i = 0;
 	while (i < 8)
 	{
-		if (contacts[i].getFirstName().compare(""))
+		if (contacts[i].getFirstName() != "")
 		{
 			print_text(std::to_string(i + 1), false);
 			print_text(contacts[i].getFirstName(), false);
@@ -65,11 +66,18 @@ void PhoneBook::search()
 	
 	std::cout << "|___________________________________________|" << std::endl;
 	
-	//fix adding oldest
-	//undestaand setw()
-	//implemet the invalid index
-	//
-	
 	std::cout << std::endl;
-	contacts[0].printContact();
+	index = getInput("Select an index: ");
+	
+	if (index.size() == 1 && index[0] >= '1' && index[0] <= '8')
+	{
+		i = index[0] - '0' - 1;
+		if (contacts[i].getFirstName() != "")
+			contacts[i].printContact();
+		else
+			std::cout << "No contact with that index" << std::endl;
+	}
+	else
+		std::cout << "Invalid index" << std::endl;
+
 }
