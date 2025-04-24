@@ -6,7 +6,7 @@
 /*   By: moboulan <moboulan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:44:32 by moboulan          #+#    #+#             */
-/*   Updated: 2025/04/24 13:39:17 by moboulan         ###   ########.fr       */
+/*   Updated: 2025/04/24 15:04:30 by moboulan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(void)
 		else if (!command.compare("EXIT"))
 			break ;	
 		else
-			std::cout << "invalid command !" << std::endl;
+			std::cout << "invalid command try (ADD, SEARCH, EXIT)!" << std::endl;
 	}	
 	return (0);
 }
